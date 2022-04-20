@@ -1,0 +1,30 @@
+{
+    "users":[{
+        "id":1,
+        "name":"SHIVANSH"
+    },
+    {
+        "id":2,
+        "name":"NIRMAN"
+    },
+    {
+        "id":3,
+        "name":"AKASH"
+    },
+    {
+        "id":4,
+        "name":"CHIRAG"
+    },
+    {
+        "id":5,
+        "name":"RAM CHARAN"
+    },
+    {
+        "id":6,
+        "name":"VIJAY"
+    },
+    {
+        "id":7,
+        "name":"NTR JUNIOR"
+    }]
+}
