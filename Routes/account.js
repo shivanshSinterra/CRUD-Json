@@ -4,11 +4,14 @@ const fs = require('fs');
 
 const dataPath = './Details/useraccount.json'
 
+
+  
+//DELETE FUNCTION USING  
 accountRoutes.delete('/account/delete/:id', (req, res) => {
   console.log("Hit")
   const userId = req.params['id'];
 
-  fs.readFile(dataPath, 'utf8', (err, data) => {
+    fs.readFile(dataPath, 'utf8', (err, data) => {
     console.log(data)
     data = JSON.parse(data)
     if (data && data.users) {
@@ -43,6 +46,7 @@ accountRoutes.delete('/account/delete/:id', (req, res) => {
   });
 })
 
+//UPDATE FUNTION USING POST
 accountRoutes.post('/account/update', (req, res) => {
   console.log("Hit")
   const userId = req.body.id;
