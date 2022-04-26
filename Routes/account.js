@@ -4,9 +4,36 @@ const fs = require('fs');
 
 const dataPath = './Details/useraccount.json'
 
-
+//ADD user FUNCTION using POST
+accountRoutes.post('/account/addaccount', (req, res) => {
+  let {id,name}= req.body;
+  fs.readFile(dataPath, 'utf8', (err, data) => {
+    console.log(data)
+    data = JSON.parse(data)
+    if (data && data.users) {
+      console.log(data);
+      let users = data.users;
+      users.push({id:Number(id),name});
+        console.log(users)
+        let userOBJ={
+          "users":users
+        }
+        fs.writeFile('./Details/useraccount.json', JSON.stringify(userOBJ), (err) => {
+          if (err) {
+            console.log('Error writing file', err)
+          } else {
+            console.log('Successfully wrote file')
+            res.json("USer Added")
+          }
+        })
+    }
+    else {
+      res.json(err)
+    }
+  });
+})
   
-//DELETE FUNCTION USING  
+//DELETE user FUNCTION USING  
 accountRoutes.delete('/account/delete/:id', (req, res) => {
   console.log("Hit")
   const userId = req.params['id'];
@@ -46,7 +73,7 @@ accountRoutes.delete('/account/delete/:id', (req, res) => {
   });
 })
 
-//UPDATE FUNTION USING POST
+//UPDATE user FUNTION USING POST
 accountRoutes.post('/account/update', (req, res) => {
   console.log("Hit")
   const userId = req.body.id;
