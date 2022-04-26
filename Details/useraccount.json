@@ -1,1 +1,28 @@
-{"users":[{"id":2,"name":"NIRMAN"},{"id":3,"name":"AKASH"},{"id":4,"name":"CHIRAG"},{"id":5,"name":"RAM CHARAN"},{"id":6,"name":"VIJAY"},{"id":7,"name":"NTR JUNIOR"}]}
+{
+    "users": [
+        {
+            "id": 4,
+            "name": "CHIRAG"
+        },
+        {
+            "id": 5,
+            "name": "RAM CHARAN"
+        },
+        {
+            "id": 6,
+            "name": "VIJAY"
+        },
+        {
+            "id": 7,
+            "name": "NTR JUNIOR"
+        },
+        {
+            "id": 2,
+            "name": "SHIVAM"
+        },
+        {
+            "id": 3,
+            "name": "SHIVAM"
+        }
+    ]
+}
