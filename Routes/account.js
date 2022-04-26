@@ -33,13 +33,13 @@ accountRoutes.get('/account', (req, res) => {
 accountRoutes.post('/account/addaccount', (req, res) => {
 
   var existAccounts = getAccountData()
-  const newAccountId = Math.floor(100000 + Math.random() * 900000)
+  // const newAccountId = Math.floor(100000 + Math.random() * 900000)
 
-  existAccounts[newAccountId] = req.body
+  // existAccounts[newAccountId] = req.body
 
-  console.log(existAccounts);
+  // console.log(existAccounts);
 
-  saveAccountData(existAccounts);
+  // saveAccountData(existAccounts);
   res.send({ success: true, msg: 'account data added successfully' })
 })
 
